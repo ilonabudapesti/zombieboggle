@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <meta content="A Boggle Solver written by Shane da Silva" name="description" />
+    <link href="css/index.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="css/boggle.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <title>Boggle Solver &mdash; by Shane da Silva</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="instructions">
+      <p>
+        Fill in the letters for the Boggle puzzle you wish to solve,
+        then click <b>Solve</b> or hit Enter.
+      </p>
+    </div>
+    <div id="boggle-panel">
+      <div id="controls">
+        <label>Size</label>
+        <input type="number" id="num-rows" min="2" max="8" value="2" />
+        &#x2716;
+        <input type="number" id="num-cols" min="2" max="8" value="2" />
+        <button id="solve-button">Solve</button>
+      </div>
+      <p id="loading-message">
+      Loading dictionary...
+      </p>
+      <div id="board" class="boggle-board">
+      </div>
+    </div>
+    <div id="words-panel">
+      <p id="num-words"></p>
+      <p id="solving-message">Solving puzzle...</p>
+      <ul id="word-list"></ul>
+    </div>
+
+    <script type="text/javascript" src="js/trie.js"></script>
+    <script type="text/javascript" src="js/boggle.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
